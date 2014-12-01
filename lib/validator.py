@@ -14,7 +14,7 @@ class Validator:
             if (self.board.piece(trio[0]) == self.board.piece(trio[1]) == self.board.piece(trio[2])) and self.board.piece(trio[0]) != '.': 
                 self.winner = self.board.piece(trio[0])
                 return True
-        return False
+        return self.board.full_board().count('.') == 0
 
     def winner(self):
         return self.winner

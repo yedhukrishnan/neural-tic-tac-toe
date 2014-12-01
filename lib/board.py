@@ -4,6 +4,8 @@ class Board:
     
     def play(self, position):
         try:
+            if self.piece(position) != '.':
+                return False
             piece = self.find_next_player_piece()
             self.board[position] = piece
             return True
@@ -19,3 +21,6 @@ class Board:
 
     def piece(self, position):
         return self.board[position]
+
+    def full_board(self):
+        return self.board
