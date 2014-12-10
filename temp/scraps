@@ -1,0 +1,50 @@
+>>> execfile("lib/splitter.py")
+>>> inputs
+[[2, 0, 0, 0, 1, 0, 0, 0, 0], [2, 0, 0, 0, 1, 0, 1, 0, 2], [2, 1, 2, 0, 1, 0, 1, 0, 2], [2, 0, 0, 0, 1, 0, 0, 0, 0], [2, 0, 0, 0, 1, 0, 1, 0, 2], [2, 1, 2, 0, 1, 0, 1, 0, 2], [0, 0, 1, 0, 2, 0, 0, 0, 0], [2, 0, 1, 0, 2, 0, 0, 0, 1], [2, 1, 1, 0, 2, 2, 0, 0, 1]]
+>>> outputs
+[[1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0], [1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0], [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0], [1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0], [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1], [1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1]]
+>>> import cv
+>>> import cv2
+>>> import numpy
+>>> 
+>>> layers = numpy.array([9, 25, 18])
+>>> nnet = cv2.ANN_MLP(layers)
+>>> len(inputs)
+9
+>>> ✐♥♣✉t❉❛t❛ ❂ ❝✈ ✳ ❈r❡❛t❡▼❛t ✭✶ ✱ ✸✷ ✱ ❝✈ ✳ ❈❱❴✸✷❋❈✶ ✮
+KeyboardInterrupt
+>>> inputData = cv.CreateMat(9, 9, cv.CV_32FC1)
+>>> outputData = cv.CreateMat(9, 18, cv.CV_32FC1)
+>>> 
+>>> for input in inputs:
+...     for i, data in enumerate(input):
+...             cv.setReal2D(input)
+  File "<stdin>", line 2
+    for i, data in enumerate(input):
+                                   ^
+IndentationError: expected an indented block
+>>> for i, input in enumerate(inputs):
+...     for j, data in enumerate(input):
+...             cv.setReal2D(inputData, i, j, data)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+AttributeError: 'module' object has no attribute 'setReal2D'
+>>> for i, input in enumerate(inputs):
+...     for j, data in enumerate(input):
+...             cv.SetReal2D(inputData, i, j, data)
+... 
+>>> for i, input in enumerate(outputs):
+...     for j, data in enumerate(output):
+...             cv.SetReal2D(outputData, i, j, data)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'output' is not defined
+>>> for i, output in enumerate(outputs):
+...     for j, data in enumerate(output):
+...             cv.SetReal2D(outputData, i, j, data)
+
+
+
+
