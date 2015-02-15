@@ -1,4 +1,5 @@
-### Tic Tac Toe using Artificial Neural Networks
+### Tic Tac Toe
 
-Tic Tac Toe is a very popular game. This application knows how to play tic tac toe. But it learns how to play a good game from you! Yes, that's true. Here, I am creating a game of tic tac toe using artificial neural networks. 
+A version of the famous Tic Tac Toe game using Artificial Neural Networks, which learns all the good moves from its opponent! 
 
+A system which learns and improves as it plays.
