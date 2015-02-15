@@ -4,7 +4,6 @@ from printer import *
 import time
 
 def main():
-    print("Hello, World!")
     file_name = "games/game" + str(time.time())
     game_file = open(file_name, "w+")
     board = Board()

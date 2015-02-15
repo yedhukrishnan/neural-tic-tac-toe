@@ -19,7 +19,7 @@ def training_data():
             inputs.append([input_value[cell] for cell in list(game)])
         else:
             outputs.append([output_value_x[cell] for cell in list(game)] + [output_value_o[cell] for cell in list(game)])
-        
+            
     return (inputs, outputs)
 
 print training_data()
