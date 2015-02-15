@@ -15,9 +15,9 @@ def main():
         board.play(int(pos))
         print_board(board)
         indices = [i for i, x in enumerate(board.full_board()) if x == "."]
-        print(indices)
+        print indices
         game_file.write("".join(board.full_board()) + "\n")
-    print("Game over!")
+    print "Game over!"
     game_file.close()
     
 
