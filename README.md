@@ -1,5 +1,3 @@
 ### Tic Tac Toe
 
-A version of the famous Tic Tac Toe game using Artificial Neural Networks, which learns all the good moves from its opponent! 
-
-A system which learns and improves as it plays.
+A Tic Tac Toe game that learns from it's opponent using artificial neural networks.
