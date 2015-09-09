@@ -6,13 +6,13 @@ class Board:
         try:
             if self.piece(position) != '.':
                 return False
-            piece = self.find_next_player_piece()
+            piece = self.find_next_player_position()
             self.board[position] = piece
             return True
         except IndexError:
             return False
     
-    def find_next_player_piece(self):
+    def find_next_player_position(self):
         o = self.board.count('o')
         x = self.board.count('x')
         if x == o:
