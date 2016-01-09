@@ -2,4 +2,10 @@
 
 [work in progress]
 
-A Tic Tac Toe algorithm trained with neural networks. Predicts the next position from the current board state.
+A neural network to predict the moves against a human player.
+
+#### Task List
+
+- [x] Interface
+- [x] Collect the games history
+- [ ] Prediction network
